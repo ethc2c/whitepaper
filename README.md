@@ -105,12 +105,11 @@ mapping(uint256 => OrderMessage) public orders;
 
 
 ## 八. 支持的币种
-目前一锤子支持`WETH` 、 `USDT` 和 `DAI` 这三个`ERC20`代币的交易。后期还会考虑再添加其它热门的币种。
+目前一锤子支持`WETH` 和 `DAI` 这二个`ERC20`代币的交易。后期还会考虑再添加其它热门的币种。
 
-这三个代币的合约地址是：
+这二个代币的合约地址是：
 ```
 WETH: 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
-USDT: 0xdac17f958d2ee523a2206206994597c13d831ec7
 DAI: 0x6b175474e89094c44da98b954eedeac495271d0f
 ```
 
@@ -134,7 +133,7 @@ if(orders[_uid].numberOfRounds == 1){
 ## 十. HAMMER说明
 1. `HAMMER`是一锤子的奖励代币，初始发行量是10000。`HAMMER`也将上线 Uniswap 交易。
 2. `HAMMER`将通过订单的完成来发行，通俗点讲就是交易挖矿。第一轮中就完成交易的订单奖励10个`HAMMER`，卖家6个，买家4个。第二轮以后的订单中没有奖励。
-3. `HAMMER`在所有一锤子上的订单中都会有奖励(只有在第一轮就完成)，比如交易`WETH`、 `USDT`等可以获取`HAMMER`的奖励。
+3. `HAMMER`在所有一锤子上的订单中都会有奖励(只有在第一轮就完成)，比如交易`WETH`、 `DAI`等可以获取`HAMMER`的奖励。
 4. 为防止恶意刷单的行为，每个订单中只奖励10个`HAMMER`。
 5. 关于`HAMMER`的其它权益则需进一步验证和讨论。
 
